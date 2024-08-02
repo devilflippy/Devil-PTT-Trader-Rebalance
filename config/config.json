@@ -1,0 +1,41 @@
+{
+    "Add_Item_to": "Prapor",        
+    "comment": "Valid Trader: Prapor, Jaeger, Mechanic, Peacekeeper, Prapor, Ragman, Ref, Skier, Therapist, Anastasia, Svetlana, Evelyne, Painter, Requisition, Artem, Scorpion",
+
+    "Add_Heal": {
+        "enabled": true,
+        "Propital":{
+            "enabled": true,
+            "price": 34000,
+            "StackObjectsCount": 22,
+            "Buy_Restriction_Max": 2,
+            "Buy_Restriction_Current": 0,
+            "loyalty_level": 2
+        },
+        "SJ0":{
+            "enabled": true,
+            "price": 24500,
+            "StackObjectsCount": 12,
+            "Buy_Restriction_Max": 3,
+            "Buy_Restriction_Current": 0,
+            "loyalty_level": 1
+        },
+        "AHF1M":{
+            "enabled": true,
+            "price": 17500,
+            "StackObjectsCount": 22,
+            "Buy_Restriction_Max": 3,
+            "Buy_Restriction_Current": 0,
+            "loyalty_level": 1
+        },
+        "IFAK":{
+            "enabled": true,
+            "price": 26000,
+            "StackObjectsCount": 22,
+            "Buy_Restriction_Max": 1,
+            "Buy_Restriction_Current": 0,
+            "loyalty_level": 1
+        }
+
+    }
+}
