@@ -1,7 +1,7 @@
 {
-    "name": "PTT__Trader_rebalance",
-    "displayName": "PTT Trader rebalance",
-    "fullName": "Devil's PTT Trader rebalance",
+    "name": "PTT__Trader_Rebalance",
+    "displayName": "PTT Trader Rebalance",
+    "fullName": "Devil's PTT Trader Rebalance",
     "version": "0.0.2",
     "sptVersion": "~3.9.x",
     "loadBefore": [],
