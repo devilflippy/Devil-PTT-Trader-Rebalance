@@ -39,7 +39,7 @@ class ModLoader implements  IPostDBLoadMod
           
             return foundId
         }
-        const traderId = getTraderId(config.Add_Item_to)
+        const traderId = getTraderId(config.New_Item_to)
         const trader = dbTables.traders[traderId]
 
 
@@ -69,7 +69,7 @@ class ModLoader implements  IPostDBLoadMod
 
                 ];
                 trader.assort.loyal_level_items["Propital"] = config.New_Item.Propital.loyalty_level;
-                logger.logWithColor(`Propital added to ${config.Add_Item_to}.`, LogTextColor.GREEN);
+                logger.logWithColor(`Propital added to ${config.New_Item_to}.`, LogTextColor.GREEN);
             }
 
             if (config.New_Item.SJ0.enabled) {
@@ -95,7 +95,7 @@ class ModLoader implements  IPostDBLoadMod
                     ]
                 ];
                 trader.assort.loyal_level_items["SJ0"] = config.New_Item.SJ0.loyalty_level;
-                logger.logWithColor(`Propital added to ${config.Add_Item_to}.`, LogTextColor.GREEN);
+                logger.logWithColor(`Propital added to ${config.New_Item_to}.`, LogTextColor.GREEN);
 
             }
 
@@ -123,7 +123,7 @@ class ModLoader implements  IPostDBLoadMod
         
                 ];
                 trader.assort.loyal_level_items["AHF1-M"] = config.New_Item.AHF1M.loyalty_level;
-                logger.logWithColor(`Propital added to ${config.Add_Item_to}.`, LogTextColor.GREEN);
+                logger.logWithColor(`Propital added to ${config.New_Item_to}.`, LogTextColor.GREEN);
                 
             }
 
@@ -152,12 +152,68 @@ class ModLoader implements  IPostDBLoadMod
 
                 ];
                 trader.assort.loyal_level_items["IFAK"] = config.New_Item.IFAK.loyalty_level;
-                logger.logWithColor(`Propital added to ${config.Add_Item_to}.`, LogTextColor.GREEN);
+                logger.logWithColor(`Propital added to ${config.New_Item_to}.`, LogTextColor.GREEN);
+            }
+            
+            if (config.New_Item.water.enabled) {
+                const waterToAssort = { //adds water to Assort
+                    "_id": "water",
+                    "_tpl": "5448fee04bdc2dbc018b4567",
+                    "parentId": "hideout",
+                    "slotId": "hideout",
+                    "upd": {
+                        "StackObjectsCount": config.New_Item.water.StackObjectsCount,
+                        "BuyRestrictionMax": config.New_Item.water.Buy_Restriction_Max,
+                        "BuyRestrictionCurrent": config.New_Item.water.Buy_Restriction_Current
+                    }
+                };
+            
+                trader.assort.items.push(waterToAssort);
+
+                trader.assort.barter_scheme["water"] = [
+                    [
+                        {
+                            "count": config.New_Item.water.price,
+                            "_tpl": "5449016a4bdc2d6f028b456f"
+                        }
+                    ]
+
+                ];
+                trader.assort.loyal_level_items["water"] = config.New_Item.water.loyalty_level;
+                logger.logWithColor(`Propital added to ${config.New_Item_to}.`, LogTextColor.GREEN);
+            }
+
+            if (config.New_Item.Can_of_green_peas.enabled) {
+                const Can_of_green_peasToAssort = { //adds Can_of_green_peas to Assort
+                    "_id": "Can_of_green_peas",
+                    "_tpl": "57347d692459774491567cf1",
+                    "parentId": "hideout",
+                    "slotId": "hideout",
+                    "upd": {
+                        "StackObjectsCount": config.New_Item.Can_of_green_peas.StackObjectsCount,
+                        "BuyRestrictionMax": config.New_Item.Can_of_green_peas.Buy_Restriction_Max,
+                        "BuyRestrictionCurrent": config.New_Item.Can_of_green_peas.Buy_Restriction_Current
+                    }
+                };
+            
+                trader.assort.items.push(Can_of_green_peasToAssort);
+
+                trader.assort.barter_scheme["Can_of_green_peas"] = [
+                    [
+                        {
+                            "count": config.New_Item.Can_of_green_peas.price,
+                            "_tpl": "5449016a4bdc2d6f028b456f"
+                        }
+                    ]
+
+                ];
+                trader.assort.loyal_level_items["Can_of_green_peas"] = config.New_Item.Can_of_green_peas.loyalty_level;
+                logger.logWithColor(`Propital added to ${config.New_Item_to}.`, LogTextColor.GREEN);
             }
         }
 
     }
-    
+
 }
 
 export const mod = new ModLoader();

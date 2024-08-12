@@ -1,5 +1,5 @@
 {
-    "Add_Item_to": "Prapor",        
+    "New_Item_to": "Prapor",        
     "comment": "Valid Trader: Prapor, Jaeger, Mechanic, Peacekeeper, Prapor, Ragman, Ref, Skier, Therapist, Anastasia, Svetlana, Evelyne, Painter, Requisition, Artem, Scorpion",
 
     "New_Item": {
@@ -30,6 +30,22 @@
             "StackObjectsCount": 22,
             "Buy_Restriction_Max": 1,
             "Buy_Restriction_Current": 0,
+            "loyalty_level": 1
+        },
+        "water":{
+            "enabled": true,
+            "price": 8450,
+            "StackObjectsCount": 360,
+            "Buy_Restriction_Max": 6,
+            "Buy_Restriction_Current": 2,
+            "loyalty_level": 1
+        },
+        "Can_of_green_peas":{
+            "enabled": true,
+            "price": 12521,
+            "StackObjectsCount": 620,
+            "Buy_Restriction_Max": 6,
+            "Buy_Restriction_Current": 2,
             "loyalty_level": 1
         }
 
